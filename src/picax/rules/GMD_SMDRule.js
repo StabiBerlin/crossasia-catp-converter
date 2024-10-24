@@ -1,0 +1,117 @@
+const parse = function(value, root) {
+    const SMD = root.find(x => x.SMD)?.SMD || ''
+    const GMD = value
+    const GMD_SMD = `${GMD}${SMD}`
+    return GMD_SMD_MAP[GMD_SMD] ? GMD_SMD_MAP[GMD_SMD] : null 
+}
+
+const GMD_SMD_MAP = {
+    
+    'aa':[{code:'0500', value:'V'},{code:'0501', value:'kartografische taktile dreidimensionale Form$b0501 kartografische taktile dreidimensionale Form$bcrn'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Gegenstand$bnr'}],
+    'ab':[{code:'0500', value:'V'},{code:'0501', value:'kartografische taktile dreidimensionale Form$bcrn'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Gegenstand$bnr'}],
+    'ac':[{code:'0500', value:'V'},{code:'0501', value:'kartografische taktile dreidimensionale Form$bcrn'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Gegenstand$bnr'}],
+    'ag':[{code:'0500', value:'A'},{code:'0501', value:'kartografisches taktiles Bild$bcri'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Blatt$bnb'}],
+    'aj':[{code:'0500', value:'A'},{code:'0501', value:'kartografisches taktiles Bild$bcri'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Karte$bno'}],
+    'ak':[{code:'0500', value:'A'},{code:'0501', value:'kartografisches taktiles Bild$bcri'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Blatt$bnb'}],
+    'aq':[{code:'0500', value:'V'},{code:'0501', value:'kartografische taktile dreidimensionale Form$bcrn'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Gegenstand$bnr'}],
+    'as':[{code:'0500', value:'A'},{code:'0501', value:'kartografisches taktiles Bild$bcri'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Karte$bno'}],
+    'ay':[{code:'0500', value:'A'},{code:'0501', value:'kartografisches taktiles Bild$bcri'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Karte$bno'}],
+    'az':[{code:'0500', value:'A'},{code:'0500', value:'Sonstige$bxxx'},{code:'0502', value:'Sonstige$bx'},{code:'0503', value:'nicht spezifiziert$bzu'}],
+
+    
+    'b': [{code:'0500', value:'C'},{code:'0500', value:'taktiles Bild$btct'}, {code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},'0503_Band$bnc'],
+    
+    'ca':[{code:'0500', value:'A'},{code:'0501', value:'Noten$bntm'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Band$bnc'}],
+    'cb':[{code:'0500', value:'A'},{code:'0501', value:'Noten$bntm'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Band$bnc'}],
+    'cc':[{code:'0500', value:'A'},{code:'0501', value:'Noten$bntm'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Band$bnc'}],
+    'cd':[{code:'0500', value:'A'},{code:'0501', value:'Noten$bntm'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Band$bnc'}],
+    'ce':[{code:'0500', value:'A'},{code:'0501', value:'Noten$bntm'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Band$bnc'}],
+    'cg':[{code:'0500', value:'A'},{code:'0501', value:'Noten$bntm'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Band$bnc'}],
+    'ch':[{code:'0500', value:'A'},{code:'0501', value:'Noten$bntm'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Band$bnc'}],
+    'cm':[{code:'0500', value:'A'},{code:'0501', value:'Noten$bntm'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Band$bnc'}],
+    'cu':[{code:'0500', value:'A'},{code:'0501', value:'Noten$bntm'},{code:'0502', value:'Sonstige$bx'},{code:'0503', value:'nicht spezifiziert$bzu'}],
+    'cz':[{code:'0500', value:'A'},{code:'0501', value:'Noten$bntm'},{code:'0502', value:'Sonstige$bx'},{code:'0503', value:'nicht spezifiziert$bzu'}],
+    
+    'd':[{code:'0500', value:'H'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Band$bnc'}],
+    'e':[{code:'0500', value:'H'},{code:'0501', value:'kartografisches taktiles Bild$bcri'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Karte$bno'}],
+    'f':[{code:'0500', value:'H'},{code:'0501', value:'Noten$bntm'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Blatt$bnb'}],
+    'gc':[{code:'0500', value:'B'},{code:'0501', value:'zweidimensionales bewegtes Bild$btdi'},{code:'0502', value:'projizierbar$bg'},{code:'0503', value:'Filmstreifen-Cartridge$bgc'}],
+    'gd':[{code:'0500', value:'B'},{code:'0501', value:'zweidimensionales bewegtes Bild$btdi'},{code:'0502', value:'projizierbar$bg'},{code:'0503', value:'Filmstreifen$bgf'}],
+    'gf':[{code:'0500', value:'B'},{code:'0501', value:'zweidimensionales bewegtes Bild$btdi'},{code:'0502', value:'projizierbar$bg'},{code:'0503', value:'Sonstige projizierbare Bilder$bmz'}],
+    'go':[{code:'0500', value:'B'},{code:'0501', value:'zweidimensionales bewegtes Bild$btdi'},{code:'0502', value:'projizierbar$bg'},{code:'0503', value:'Filmrolle$bmo'}],
+    'gs':[{code:'0500', value:'B'},{code:'0501', value:'unbewegtes Bild$bsti'},{code:'0502', value:'projizierbar$bg'},{code:'0503', value:'Dia$bgs'}],
+    'gt':[{code:'0500', value:'B'},{code:'0501', value:'unbewegtes Bild$bsti'},{code:'0502', value:'projizierbar$bg'},{code:'0503', value:'Overheadfolie$bgt'}],
+    'gz':[{code:'0500', value:'B'},{code:'0500', value:'Sonstige$bxxx'},{code:'0502', value:'projizierbar$bg'},{code:'0503', value:'Sonstige projizierbare Bilder$bmz'}],
+    'ha':[{code:'0500', value:'E'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Mirkroform$bh'},{code:'0503', value:'Mikrofilmlochkarte$bha'}],
+    'hb':[{code:'0500', value:'E'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Mirkroform$bh'},{code:'0503', value:'Mikrofilm-Cartridge$bhb'}],
+    'hc':[{code:'0500', value:'E'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Mirkroform$bh'},{code:'0503', value:'Mikrofilmkassette$bhc'}],
+    'hd':[{code:'0500', value:'E'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Mirkroform$bh'},{code:'0503', value:'Mikrofilmrolle$bhj'}],
+    'he':[{code:'0500', value:'E'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Mirkroform$bh'},{code:'0503', value:'Mikrofiche$bhe'}],
+    'hf':[{code:'0500', value:'E'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Mirkroform$bh'},{code:'0503', value:'Mikrofichekassette$bhf'}],
+    'hg':[{code:'0500', value:'E'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Mirkroform$bh'},{code:'0503', value:'Lichtundurchlässiger Mikrofiche$bhg'}],
+    'hz':[{code:'0500', value:'E'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Mirkroform$bh'},{code:'0503', value:'Sonstige Mikroformen$bhz'}],
+    'kc':[{code:'0500', value:'B'},{code:'0501', value:'unbewegtes Bild$bsti'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Blatt$bnb'}],
+    'kd':[{code:'0500', value:'B'},{code:'0501', value:'unbewegtes Bild$bsti'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Blatt$bnb'}],
+    'ke':[{code:'0500', value:'B'},{code:'0501', value:'unbewegtes Bild$bsti'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Blatt$bnb'}],
+    'kf':[{code:'0500', value:'B'},{code:'0501', value:'unbewegtes Bild$bsti'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Blatt$bnb'}],
+    'kg':[{code:'0500', value:'B'},{code:'0501', value:'unbewegtes Bild$bsti'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Blatt$bnb'}],
+    
+    'kh':[{code:'0500', value:'B'},{code:'0501', value:'unbewegtes Bild$bsti'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Blatt$bnb'}],
+    
+    'ki':[{code:'0500', value:'B'},{code:'0501', value:'unbewegtes Bild$bsti'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Blatt$bnb'}],
+    'kj':[{code:'0500', value:'B'},{code:'0501', value:'unbewegtes Bild$bsti'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Blatt$bnb'}],
+    'kl':[{code:'0500', value:'B'},{code:'0501', value:'unbewegtes Bild$bsti'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Blatt$bnb'}],
+    'kn':[{code:'0500', value:'B'},{code:'0501', value:'unbewegtes Bild$bsti'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Blatt$bnb'}],
+    'ko':[{code:'0500', value:'B'},{code:'0501', value:'unbewegtes Bild$bsti'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Blatt$bnb'}],
+    'kz':[{code:'0500', value:'B'},{code:'0501', value:'unbewegtes Bild$bsti'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},{code:'0503', value:'Sonstige Datenträger, die ohne Hilfsmittel zu benutzen sind$bnz'}],
+    'mc':[{code:'0500', value:'B'},{code:'0501', value:'zweidimensionales bewegtes Bild$btdi'},{code:'0502', value:'video$bv'},{code:'0503', value:'Videocartridge$bvc'}],
+    'mf':[{code:'0500', value:'B'},{code:'0501', value:'zweidimensionales bewegtes Bild$btdi'},{code:'0502', value:'video$bv'},{code:'0503', value:'Videokassette$bvf'}],
+    'mr':[{code:'0500', value:'B'},{code:'0501', value:'zweidimensionales bewegtes Bild$btdi'},{code:'0502', value:'video$bv'},{code:'0503', value:'Videobandspule$bvr'}],
+    'mz':[{code:'0500', value:'B'},{code:'0501', value:'zweidimensionales bewegtes Bild$btdi'},{code:'0502', value:'video$bv'},{code:'0503', value:'Videodisk$bvd'}],
+    'sb':[{code:'0500', value:'B'},{code:'0501', value:'aufgeführte Musik$bprm'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Audiodisk$bsd'}],
+    'sc':[{code:'0500', value:'B'},{code:'0501', value:'aufgeführte Musik$bprm'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Audiodisk$bsd'}],
+    'sd':[{code:'0500', value:'B'},{code:'0501', value:'aufgeführte Musik$bprm'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Audiodisk$bsd'}],
+    'se':[{code:'0500', value:'B'},{code:'0501', value:'aufgeführte Musik$bprm'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Phonographenzylinder$bse'}],
+    'sg':[{code:'0500', value:'B'},{code:'0501', value:'aufgeführte Musik$bprm'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Audiocartridge$bsg'}],
+    'si':[{code:'0500', value:'B'},{code:'0501', value:'aufgeführte Musik$bprm'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Sonstige Tonträger$bsz'}],
+    'sq':[{code:'0500', value:'B'},{code:'0501', value:'aufgeführte Musik$bprm'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Notenrolle$bsq'}],
+    'ss':[{code:'0500', value:'B'},{code:'0501', value:'aufgeführte Musik$bprm'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Audiokassette$bss'}],
+    'st':[{code:'0500', value:'B'},{code:'0501', value:'aufgeführte Musik$bprm'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Tonbandspule$bst'}],
+    'sw':[{code:'0500', value:'B'},{code:'0501', value:'aufgeführte Musik$bprm'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Sonstige Tonträger$bsz'}],
+    'sz':[{code:'0500', value:'B'},{code:'0501', value:'aufgeführte Musik$bprm'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Sonstige Tonträger$bsz'}],
+    
+    'tb':[{code:'0500', value:'B'},{code:'0501', value:'gesprochenes_Wort$bspw'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Audiodisk$bsd'}],
+    'tc':[{code:'0500', value:'B'},{code:'0501', value:'gesprochenes_Wort$bspw'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Audiodisk$bsd'}],
+    'td':[{code:'0500', value:'B'},{code:'0501', value:'gesprochenes_Wort$bspw'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Audiodisk$bsd'}],
+    'te':[{code:'0500', value:'B'},{code:'0501', value:'gesprochenes_Wort$bspw'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Phonographenzylinder$bse'}],
+    'tg':[{code:'0500', value:'B'},{code:'0501', value:'gesprochenes_Wort$bspw'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Audiocartridge$bsg'}],
+    'ti':[{code:'0500', value:'B'},{code:'0501', value:'gesprochenes_Wort$bspw'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Sonstige Tonträger$bsz'}],
+    'tq':[{code:'0500', value:'B'},{code:'0501', value:'gesprochenes_Wort$bspw'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Notenrolle$bsq'}],
+    'ts':[{code:'0500', value:'B'},{code:'0501', value:'gesprochenes_Wort$bspw'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Audiokassette$bss'}],
+    'tt':[{code:'0500', value:'B'},{code:'0501', value:'gesprochenes_Wort$bspw'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Tonbandspule$bst'}],
+    'tw':[{code:'0500', value:'B'},{code:'0501', value:'gesprochenes_Wort$bspw'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Sonstige Tonträger$bsz'}],
+    'tz':[{code:'0500', value:'B'},{code:'0501', value:'gesprochenes_Wort$bspw'},{code:'0502', value:'audio$bs'},{code:'0503', value:'Sonstige Tonträger$bsz'}],
+
+    'vc':[{code:'0500', value:'B'},{code:'0501', value:'zweidimensionales bewegtes Bild$btdi'},{code:'0502', value:'video$bv'},{code:'0503', value:'Videocartridge$bvc'}],
+    'vd':[{code:'0500', value:'B'},{code:'0501', value:'zweidimensionales bewegtes Bild$btdi'},{code:'0502', value:'video$bv'},{code:'0503', value:'Videodisk$bvd'}],
+    'vf':[{code:'0500', value:'B'},{code:'0501', value:'zweidimensionales bewegtes Bild$btdi'},{code:'0502', value:'video$bv'},{code:'0503', value:'Videokassette$bvf'}],
+    'vr':[{code:'0500', value:'B'},{code:'0501', value:'zweidimensionales bewegtes Bild$btdi'},{code:'0502', value:'video$bv'},{code:'0503', value:'Videobandspule$bvr'}],
+    'vz':[{code:'0500', value:'B'},{code:'0501', value:'zweidimensionales bewegtes Bild$btdi'},{code:'0502', value:'video$bv'},{code:'0503', value:'Sonstige Videodatenträger$bvz'}],
+    'wa':[{code:'0500', value:'S'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Computermedien$bc'},{code:'0503', value:'Magnetbandcartridge$bca'}],
+    'wb':[{code:'0500', value:'S'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Computermedien$bc'},{code:'0503', value:'Computerchip-Cartridge$bcb'}],
+    'wc':[{code:'0500', value:'S'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Computermedien$bc'},{code:'0503', value:'Computerdisk-Cartridge$ce'}],
+    'wf':[{code:'0500', value:'S'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Computermedien$bc'},{code:'0503', value:'Magnetbandkassette$bcf'}],
+    'wh':[{code:'0500', value:'S'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Computermedien$bc'},{code:'0503', value:'Magnetbandspule$bch'}],
+    'wj':[{code:'0500', value:'S'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Computermedien$bc'},{code:'0503', value:'Sonstige Computermedien$bcz'}],
+    'wm':[{code:'0500', value:'S'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Computermedien$bc'},{code:'0503', value:'Sonstige Computermedien$bcz'}],
+    'wo':[{code:'0500', value:'S'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Computermedien$bc'},{code:'0503', value:'Computerdisk$bcd'}],
+    'wr':[{code:'0500', value:'O'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Computermedien$bc'},{code:'0503', value:'Online-Ressource$bcr'}],
+    'wu':[{code:'0500', value:'S'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Computermedien$bc'},{code:'0503', value:'Sonstige Computermedien$bcz'}],
+    'wz':[{code:'0500', value:'S'},{code:'0501', value:'Text$btxt'},{code:'0502', value:'Computermedien$bc'},{code:'0503', value:'Sonstige Computermedien$bcz'}],
+    
+    'x': [{code:'0500', value:'V'},{code:'0501', value:'dreidimensionale Form$btdf'},{code:'0502', value:'ohne Hilfsmittel zu benutzen$bn'},'nr'],
+    'y': [{code:'0501', value:'Text$btxt'},{code:'0502', value:'$bnX1'},{code:'0502', value:'$bcX2'},{code:'0503', value:'$bnc$X1'},{code:'0503', value:'$bcdX2'}],
+
+}
+
+export {parse}
