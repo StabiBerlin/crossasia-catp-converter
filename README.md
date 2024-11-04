@@ -22,7 +22,3 @@ For an example of usage, refer to `sample.js` in the `sample` folder.
 ## Prerequisites
 
 - Node.js v21
-
---- 
-
-Let me know if you need further customization!
